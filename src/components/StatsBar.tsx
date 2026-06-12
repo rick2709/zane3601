@@ -62,7 +62,7 @@ export default function StatsBar() {
   return (
     <section ref={ref} className="relative py-2 overflow-hidden border-y border-black/6 bg-[#F7F7F7]">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 divide-x divide-black/6">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-px sm:gap-0 bg-black/6 sm:bg-transparent sm:divide-x sm:divide-black/6 [&>*]:bg-[#F7F7F7] [&>*:nth-child(5)]:col-span-2 [&>*:nth-child(5)]:sm:col-span-1">
           {stats.map((s, i) => (
             <StatItem key={s.label} {...s} active={inView} index={i} />
           ))}

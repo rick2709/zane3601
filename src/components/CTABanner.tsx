@@ -21,8 +21,8 @@ export default function CTABanner() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/25 bg-white/12 text-white text-xs font-bold uppercase tracking-wider mb-8">
-            <Sparkles size={12} className="fill-current" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/25 bg-white/12 text-white text-[11px] font-bold uppercase tracking-wider mb-8 whitespace-nowrap">
+            <Sparkles size={11} className="fill-current shrink-0" />
             Start Today — No Credit Card Required
           </div>
 

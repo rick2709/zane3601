@@ -23,7 +23,7 @@ const badges = [
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-white">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16 bg-white">
       {/* Subtle dot grid */}
       <div className="absolute inset-0 cyber-grid opacity-60" />
       {/* Very faint warm gradient wash */}
@@ -33,10 +33,10 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-orange-400/6 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-amber-400/8 blur-[120px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
         {/* Left — copy */}
-        <div className="max-w-xl">
+        <div className="w-full min-w-0">
           {/* Eyebrow */}
           <motion.div
             custom={0}
@@ -57,7 +57,7 @@ export default function Hero() {
             variants={floatVariants}
             initial="hidden"
             animate="visible"
-            className="text-5xl sm:text-6xl lg:text-[4.2rem] font-bold leading-[1.05] tracking-tight text-[#141414]"
+            className="text-[2.35rem] sm:text-5xl lg:text-[4.2rem] font-bold leading-[1.1] tracking-tight text-[#141414]"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             Your Domain.{" "}
@@ -137,12 +137,12 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Domain search below headline on mobile */}
+      {/* Domain search — shown below copy on mobile, hidden on desktop (desktop gets full DomainSection below) */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className="relative z-10 w-full max-w-3xl mx-auto px-4 sm:px-6 pb-20 lg:hidden"
+        className="relative z-10 w-full max-w-3xl mx-auto px-4 sm:px-6 pb-16 lg:hidden"
       >
         <DomainSearchWidget />
       </motion.div>
