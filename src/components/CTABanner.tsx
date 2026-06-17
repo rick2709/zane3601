@@ -27,14 +27,14 @@ export default function CTABanner() {
           </div>
 
           <h2
-            className="text-[56px] font-medium leading-[1.05] text-white"
+            className="text-[42px] font-normal leading-[1.4] text-white"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Your next domain is{" "}
             <span className="underline decoration-white/40 decoration-4 underline-offset-4">one search away.</span>
           </h2>
 
-          <p className="mt-6 text-[14px] text-white/80 leading-[1.3] max-w-2xl mx-auto">
+          <p className="mt-6 text-[18px] text-white/80 leading-[1.3] max-w-2xl mx-auto">
             Join 4,800+ businesses across 60+ countries who trust Zane360 with their domains and digital security. Setup takes under 5 minutes.
           </p>
 
@@ -43,7 +43,7 @@ export default function CTABanner() {
               href="#domain-search"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-normal text-[14px] text-[#FF4F00] bg-white hover:bg-orange-50 transition-colors shadow-[0_4px_24px_rgba(0,0,0,0.15)]"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-normal text-[18px] text-[#FF4F00] bg-white hover:bg-orange-50 transition-colors shadow-[0_4px_24px_rgba(0,0,0,0.15)]"
             >
               Search Your Domain
               <ArrowRight size={18} />
@@ -52,7 +52,7 @@ export default function CTABanner() {
               href="#pricing"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-normal text-[14px] text-white border-2 border-white/30 hover:border-white/50 hover:bg-white/8 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-normal text-[18px] text-white border-2 border-white/30 hover:border-white/50 hover:bg-white/8 transition-all"
             >
               View Pricing
             </motion.a>

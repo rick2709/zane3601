@@ -38,11 +38,11 @@ export default function Pricing() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-[12px] font-medium uppercase text-[#696F7B] mb-4">Pricing</p>
-            <h2 className="text-[56px] font-medium leading-[1.05] text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
+            <h2 className="text-[42px] font-normal leading-[1.4] text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
               Simple, honest{" "}
               <span className="gradient-text">pricing.</span>
             </h2>
-            <p className="mt-5 text-[14px] text-[#696F7B] leading-[1.3] max-w-xl mx-auto">
+            <p className="mt-5 text-[18px] text-[#696F7B] leading-[1.3] max-w-xl mx-auto">
               No renewal price shocks. No hidden fees. Cancel anytime.
             </p>
           </motion.div>
@@ -78,10 +78,10 @@ export default function Pricing() {
                 )}
 
                 <div className="mb-6">
-                  <h3 className={`text-[15px] font-light mb-1 ${isOrange || isDark ? "text-white" : "text-[#141414]"}`}>
+                  <h3 className={`text-[15px] font-light mb-1 ${isOrange || isDark ? "text-white" : "text-[#141414]"}`} style={{ fontFamily: "var(--font-heading)" }}>
                     {plan.name}
                   </h3>
-                  <p className={`text-[14px] leading-[1.3] ${isOrange ? "text-white/75" : isDark ? "text-white/60" : "text-[#696F7B]"}`}>{plan.desc}</p>
+                  <p className={`text-[18px] leading-[1.3] ${isOrange ? "text-white/75" : isDark ? "text-white/60" : "text-[#696F7B]"}`}>{plan.desc}</p>
                 </div>
 
                 <div className="mb-8">
@@ -89,13 +89,13 @@ export default function Pricing() {
                     <span className={`text-[42px] font-normal ${isOrange || isDark ? "text-white" : "text-[#141414]"}`} style={{ fontFamily: "var(--font-heading)" }}>
                       {plan.price}
                     </span>
-                    <span className={`mb-2 text-[14px] ${isOrange ? "text-white/70" : isDark ? "text-white/50" : "text-[#696F7B]"}`}>{plan.period}</span>
+                    <span className={`mb-2 text-[18px] ${isOrange ? "text-white/70" : isDark ? "text-white/50" : "text-[#696F7B]"}`}>{plan.period}</span>
                   </div>
                 </div>
 
                 <ul className="space-y-3 mb-8 flex-1">
                   {plan.features.map((f) => (
-                    <li key={f} className="flex items-start gap-3 text-[14px] leading-[1.3]">
+                    <li key={f} className="flex items-start gap-3 text-[18px] leading-[1.3]">
                       <Check size={15} className={`shrink-0 mt-0.5 ${isOrange ? "text-white" : isDark ? "text-[#FF4F00]" : "text-[#FF4F00]"}`} />
                       <span className={isOrange ? "text-white/90" : isDark ? "text-white/75" : "text-[#6B6B6B]"}>{f}</span>
                     </li>
@@ -105,7 +105,7 @@ export default function Pricing() {
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
-                  className={`w-full py-3.5 rounded-2xl font-normal text-[14px] transition-all ${
+                  className={`w-full py-3.5 rounded-2xl font-normal text-[18px] transition-all ${
                     isOrange
                       ? "bg-white text-[#FF4F00] hover:bg-orange-50"
                       : isDark

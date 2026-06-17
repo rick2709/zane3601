@@ -48,7 +48,7 @@ export default function Testimonials() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-[12px] font-medium uppercase text-[#696F7B] mb-4">Social Proof</p>
-            <h2 className="text-[56px] font-medium leading-[1.05] text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
+            <h2 className="text-[42px] font-normal leading-[1.4] text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
               Trusted by teams{" "}
               <span className="gradient-text">across the globe.</span>
             </h2>
@@ -69,7 +69,7 @@ export default function Testimonials() {
               className="bg-white border border-black/7 rounded-3xl p-8 sm:p-10 shadow-[0_4px_32px_rgba(0,0,0,0.06)]"
             >
               <Quote className="text-[#FF4F00]/20 mb-4" size={32} />
-              <p className="text-[14px] text-[#141414] leading-[1.3] mb-8">
+              <p className="text-[18px] text-[#141414] leading-[1.3] mb-8">
                 &ldquo;{testimonials[active].quote}&rdquo;
               </p>
               <div className="flex items-center justify-between flex-wrap gap-4">
@@ -82,10 +82,10 @@ export default function Testimonials() {
                     className="rounded-full ring-2 ring-[#FF4F00]/15"
                   />
                   <div>
-                    <div className="text-[14px] font-medium text-[#141414]">
+                    <div className="text-[18px] font-medium text-[#141414]">
                       {testimonials[active].name}
                     </div>
-                    <div className="text-[14px] text-[#696F7B]">{testimonials[active].role}</div>
+                    <div className="text-[18px] text-[#696F7B]">{testimonials[active].role}</div>
                   </div>
                 </div>
                 <div className="flex gap-1">

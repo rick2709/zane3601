@@ -28,11 +28,11 @@ export default function WhyZane360() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-[12px] font-medium uppercase text-[#696F7B] mb-4">Why Choose Us</p>
-            <h2 className="text-[56px] font-medium leading-[1.05] text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
+            <h2 className="text-[42px] font-normal leading-[1.4] text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
               Built for businesses that{" "}
               <span className="gradient-text">can&apos;t afford to fail.</span>
             </h2>
-            <p className="mt-5 text-[14px] text-[#696F7B] leading-[1.3] max-w-xl mx-auto">
+            <p className="mt-5 text-[18px] text-[#696F7B] leading-[1.3] max-w-xl mx-auto">
               We don&apos;t just sell domains and security products. We become the digital infrastructure team you never had.
             </p>
           </motion.div>
@@ -55,10 +55,10 @@ export default function WhyZane360() {
               <div className={`inline-flex p-3 rounded-xl mb-5 transition-transform group-hover:scale-110 duration-300 ${p.iconBg}`}>
                 <p.icon size={22} />
               </div>
-              <h3 className="text-[15px] font-light text-[#141414] mb-3">
+              <h3 className="text-[15px] font-light text-[#141414] mb-3" style={{ fontFamily: "var(--font-heading)" }}>
                 {p.title}
               </h3>
-              <p className="text-[14px] text-[#696F7B] leading-[1.3]">{p.desc}</p>
+              <p className="text-[18px] text-[#696F7B] leading-[1.3]">{p.desc}</p>
             </motion.div>
           ))}
         </motion.div>

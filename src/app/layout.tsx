@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Rubik, DM_Sans } from "next/font/google";
+import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const misoFont = Rubik({
+const misoFont = Outfit({
   subsets: ["latin"],
   variable: "--font-heading",
-  weight: ["400", "500"],
+  weight: ["300", "400"],
   display: "swap",
 });
 
