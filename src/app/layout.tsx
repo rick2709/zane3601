@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Rubik, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const misoFont = Rubik({
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-heading",
+  weight: ["400", "500"],
   display: "swap",
 });
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-body",
+  weight: ["300", "400", "500"],
   display: "swap",
 });
 
@@ -30,8 +31,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} scroll-smooth`}>
-      <body className="min-h-screen bg-white text-[#141414] antialiased overflow-x-hidden">
+    <html lang="en" className={`${misoFont.variable} ${dmSans.variable} scroll-smooth`}>
+      <body className="min-h-screen bg-white text-black antialiased overflow-x-hidden">
         {children}
       </body>
     </html>

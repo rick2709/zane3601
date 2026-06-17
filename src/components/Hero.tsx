@@ -44,7 +44,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FF4F00]/8 border border-[#FF4F00]/20 mb-5"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#FF4F00] animate-pulse-glow" />
-            <span className="text-xs font-semibold text-[#FF4F00] tracking-wider uppercase">
+            <span className="text-[12px] font-medium text-[#FF4F00] uppercase">
               Global Domains · Enterprise Security
             </span>
           </motion.div>
@@ -52,8 +52,8 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             custom={1} variants={floatVariants} initial="hidden" animate="visible"
-            className="text-[2.35rem] sm:text-5xl lg:text-[4.2rem] font-bold leading-[1.1] tracking-tight text-[#141414]"
-            style={{ fontFamily: "var(--font-space-grotesk)" }}
+            className="text-[72px] font-medium leading-[1.05] text-[#141414]"
+            style={{ fontFamily: "var(--font-heading)" }}
           >
             Your Domain.{" "}
             <span className="gradient-text">Your Shield.</span>
@@ -64,7 +64,7 @@ export default function Hero() {
           {/* Description — short on mobile, full on sm+ */}
           <motion.p
             custom={2} variants={floatVariants} initial="hidden" animate="visible"
-            className="mt-4 text-base sm:text-lg text-[#6B6B6B] leading-relaxed"
+            className="mt-4 text-[14px] text-[#696F7B] leading-[1.3]"
           >
             <span className="sm:hidden">500+ TLDs · AI cybersecurity · 60+ countries. One platform.</span>
             <span className="hidden sm:inline">
@@ -82,14 +82,14 @@ export default function Hero() {
             <motion.a
               href="#domain-search"
               whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}
-              className="btn-glow inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-semibold text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors duration-200 shadow-lg shadow-orange-500/20 text-sm sm:text-base"
+              className="btn-glow inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-normal text-[14px] text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors duration-200 shadow-lg shadow-orange-500/20"
             >
               Find a Domain <ArrowRight size={15} />
             </motion.a>
             <motion.a
               href="#security"
               whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}
-              className="inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-semibold text-[#141414] border-2 border-[#141414]/15 hover:border-[#141414]/30 hover:bg-black/4 transition-all duration-200 text-sm sm:text-base"
+              className="inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-normal text-[14px] text-[#141414] border-2 border-[#141414]/15 hover:border-[#141414]/30 hover:bg-black/4 transition-all duration-200"
             >
               <Shield size={15} className="text-[#FF4F00]" />
               Secure Your Business
@@ -107,7 +107,7 @@ export default function Hero() {
                 className={`flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-gradient-to-r ${b.color} border ${b.border}`}
               >
                 <b.icon size={12} className={b.text} />
-                <span className={`text-[11px] sm:text-xs font-semibold ${b.text}`}>{b.label}</span>
+                <span className={`text-[12px] font-medium ${b.text}`}>{b.label}</span>
               </div>
             ))}
           </motion.div>

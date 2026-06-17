@@ -48,7 +48,7 @@ export default function DomainSearchWidget() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search for your perfect domain…"
-            className="w-full pl-12 pr-4 py-4 rounded-2xl bg-white border border-black/12 text-[#141414] placeholder-[#9B9B9B] focus:outline-none focus:border-[#FF4F00]/40 focus:ring-2 focus:ring-[#FF4F00]/10 transition-all text-base"
+            className="w-full pl-12 pr-4 py-4 rounded-2xl bg-white border border-black/12 text-[#141414] text-[14px] placeholder-[#9B9B9B] focus:outline-none focus:border-[#FF4F00]/40 focus:ring-2 focus:ring-[#FF4F00]/10 transition-all"
             aria-label="Domain name search"
           />
         </div>
@@ -57,7 +57,7 @@ export default function DomainSearchWidget() {
           disabled={loading || !query.trim()}
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.96 }}
-          className="btn-glow shrink-0 px-6 py-4 rounded-2xl font-semibold text-white bg-[#FF4F00] hover:bg-[#CC3F00] disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+          className="btn-glow shrink-0 px-6 py-4 rounded-2xl font-normal text-[14px] text-white bg-[#FF4F00] hover:bg-[#CC3F00] disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
         >
           {loading ? <Loader2 size={18} className="animate-spin" /> : "Search"}
         </motion.button>
@@ -70,7 +70,7 @@ export default function DomainSearchWidget() {
             key={t.ext}
             type="button"
             onClick={() => setQuery((q) => (q.split(".")[0] || q) + t.ext)}
-            className="shrink-0 px-3 py-1.5 rounded-full border border-black/10 bg-white hover:border-[#FF4F00]/30 hover:bg-orange-50 transition-all text-xs font-medium text-[#6B6B6B] hover:text-[#FF4F00]"
+            className="shrink-0 px-3 py-1.5 rounded-full border border-black/10 bg-white hover:border-[#FF4F00]/30 hover:bg-orange-50 transition-all text-[12px] font-medium text-[#696F7B] hover:text-[#FF4F00]"
           >
             {t.ext} <span className="text-[#9B9B9B] ml-1">{t.price}</span>
           </button>
@@ -104,8 +104,8 @@ export default function DomainSearchWidget() {
               ) : (
                 <>
                   <div className="px-5 py-3 border-b border-black/5 flex items-center justify-between">
-                    <span className="text-xs font-semibold text-[#9B9B9B] uppercase tracking-wider">Results for &ldquo;{searched}&rdquo;</span>
-                    <span className="text-xs text-[#FF4F00] font-semibold">{results.filter((r) => r.available).length} available</span>
+                    <span className="text-[12px] font-medium text-[#696F7B] uppercase">Results for &ldquo;{searched}&rdquo;</span>
+                    <span className="text-[12px] text-[#FF4F00] font-medium">{results.filter((r) => r.available).length} available</span>
                   </div>
                   <div className="divide-y divide-black/5">
                     {results.map((r, i) => (
@@ -121,13 +121,13 @@ export default function DomainSearchWidget() {
                             ? <CheckCircle2 size={17} className="text-emerald-500 shrink-0" />
                             : <XCircle size={17} className="text-[#CCCCCC] shrink-0" />}
                           <div>
-                            <span className={`font-semibold text-sm ${r.available ? "text-[#141414]" : "text-[#CCCCCC] line-through"}`}>
+                            <span className={`font-normal text-[14px] ${r.available ? "text-[#141414]" : "text-[#CCCCCC] line-through"}`}>
                               {searched}{r.ext}
                             </span>
-                            <span className="text-xs text-[#9B9B9B] ml-2">{r.price}</span>
+                            <span className="text-[12px] text-[#696F7B] ml-2">{r.price}</span>
                           </div>
                           {r.available && (
-                            <span className="hidden sm:inline text-[11px] font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+                            <span className="hidden sm:inline text-[12px] font-medium text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
                               Available
                             </span>
                           )}
@@ -136,13 +136,13 @@ export default function DomainSearchWidget() {
                           <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors"
+                            className="flex items-center gap-1.5 px-4 py-2 rounded-xl text-[12px] font-normal text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors"
                           >
                             <ShoppingCart size={12} />
                             Add to Cart
                           </motion.button>
                         ) : (
-                          <span className="px-4 py-2 rounded-xl text-xs font-medium text-[#CCCCCC] border border-black/8">
+                          <span className="px-4 py-2 rounded-xl text-[12px] font-medium text-[#CCCCCC] border border-black/8">
                             Taken
                           </span>
                         )}

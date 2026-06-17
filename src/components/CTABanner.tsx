@@ -21,20 +21,20 @@ export default function CTABanner() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/25 bg-white/12 text-white text-[11px] font-bold uppercase tracking-wider mb-8 whitespace-nowrap">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/25 bg-white/12 text-white text-[12px] font-medium uppercase mb-8 whitespace-nowrap">
             <Sparkles size={11} className="fill-current shrink-0" />
             Start Today — No Credit Card Required
           </div>
 
           <h2
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
-            style={{ fontFamily: "var(--font-space-grotesk)" }}
+            className="text-[56px] font-medium leading-[1.05] text-white"
+            style={{ fontFamily: "var(--font-heading)" }}
           >
             Your next domain is{" "}
             <span className="underline decoration-white/40 decoration-4 underline-offset-4">one search away.</span>
           </h2>
 
-          <p className="mt-6 text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-6 text-[14px] text-white/80 leading-[1.3] max-w-2xl mx-auto">
             Join 4,800+ businesses across 60+ countries who trust Zane360 with their domains and digital security. Setup takes under 5 minutes.
           </p>
 
@@ -43,7 +43,7 @@ export default function CTABanner() {
               href="#domain-search"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-[#FF4F00] bg-white hover:bg-orange-50 transition-colors text-lg shadow-[0_4px_24px_rgba(0,0,0,0.15)]"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-normal text-[14px] text-[#FF4F00] bg-white hover:bg-orange-50 transition-colors shadow-[0_4px_24px_rgba(0,0,0,0.15)]"
             >
               Search Your Domain
               <ArrowRight size={18} />
@@ -52,7 +52,7 @@ export default function CTABanner() {
               href="#pricing"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-bold text-white border-2 border-white/30 hover:border-white/50 hover:bg-white/8 transition-all text-lg"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-normal text-[14px] text-white border-2 border-white/30 hover:border-white/50 hover:bg-white/8 transition-all"
             >
               View Pricing
             </motion.a>
@@ -67,10 +67,10 @@ export default function CTABanner() {
               { val: "99.99%", label: "Uptime SLA" },
             ].map((s) => (
               <div key={s.label} className="text-center">
-                <div className="text-2xl font-bold text-white" style={{ fontFamily: "var(--font-space-grotesk)" }}>
+                <div className="text-[32px] font-normal text-white" style={{ fontFamily: "var(--font-heading)" }}>
                   {s.val}
                 </div>
-                <div className="text-xs text-white/60 mt-1">{s.label}</div>
+                <div className="text-[12px] text-white/60 mt-1">{s.label}</div>
               </div>
             ))}
           </div>

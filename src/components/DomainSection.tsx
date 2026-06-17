@@ -19,15 +19,15 @@ export default function DomainSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FF4F00]/20 bg-orange-50 text-[#FF4F00] text-xs font-bold uppercase tracking-wider mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FF4F00]/20 bg-orange-50 text-[#FF4F00] text-[14px] font-medium mb-6">
               <Globe size={12} />
               500+ TLDs Available
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-[#141414]" style={{ fontFamily: "var(--font-space-grotesk)" }}>
+            <h2 className="text-[56px] font-medium leading-[1.05] text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
               Find your perfect{" "}
               <span className="gradient-text">domain name.</span>
             </h2>
-            <p className="mt-5 text-lg text-[#6B6B6B]">
+            <p className="mt-5 text-[14px] text-[#696F7B] leading-[1.3]">
               Search across hundreds of extensions instantly. Free WHOIS privacy on every registration.
             </p>
           </motion.div>
@@ -49,12 +49,12 @@ export default function DomainSection() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="mt-10 text-center"
         >
-          <p className="text-xs text-[#9B9B9B] uppercase tracking-wider mb-4">Popular extensions</p>
+          <p className="text-[12px] text-[#696F7B] font-medium uppercase mb-4">Popular extensions</p>
           <div className="flex flex-wrap justify-center gap-2">
             {popularTLDs.map((tld) => (
               <span
                 key={tld}
-                className="px-3 py-1.5 rounded-full border border-black/10 bg-white text-sm font-mono text-[#6B6B6B]"
+                className="px-3 py-1.5 rounded-full border border-black/10 bg-white text-[14px] font-medium text-[#696F7B]"
               >
                 {tld}
               </span>
@@ -62,7 +62,7 @@ export default function DomainSection() {
           </div>
           <a
             href="#pricing"
-            className="inline-flex items-center gap-1.5 mt-6 text-sm text-[#FF4F00] hover:text-[#CC3F00] font-semibold transition-colors group"
+            className="inline-flex items-center gap-1.5 mt-6 text-[14px] text-[#FF4F00] hover:text-[#CC3F00] font-normal transition-colors group"
           >
             See all pricing <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
           </a>

@@ -73,11 +73,11 @@ export default function Footer() {
                   <Shield size={18} className="text-white" />
                 </div>
               </div>
-              <span className="text-xl font-bold text-white" style={{ fontFamily: "var(--font-space-grotesk)" }}>
+              <span className="text-[22px] font-normal text-white" style={{ fontFamily: "var(--font-heading)" }}>
                 Zane<span className="text-[#FF4F00]">360</span>
               </span>
             </a>
-            <p className="text-sm text-white/45 leading-relaxed mb-6">
+            <p className="text-[14px] text-white/45 leading-[1.3] mb-6">
               International domain registration and enterprise cybersecurity for businesses that demand the best.
             </p>
             <div className="flex gap-3">
@@ -98,13 +98,13 @@ export default function Footer() {
           {/* Link columns */}
           {Object.entries(links).map(([category, items]) => (
             <div key={category}>
-              <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-white/30 mb-5">
+              <h4 className="text-[12px] font-medium uppercase text-white/30 mb-5">
                 {category}
               </h4>
               <ul className="space-y-3">
                 {items.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="text-sm text-white/45 hover:text-white/80 transition-colors">
+                    <a href={link.href} className="text-[14px] text-white/45 hover:text-white/80 transition-colors">
                       {link.label}
                     </a>
                   </li>
@@ -118,16 +118,16 @@ export default function Footer() {
         <div className="py-10 border-t border-white/8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <h4 className="font-semibold text-white mb-1" style={{ fontFamily: "var(--font-space-grotesk)" }}>
+              <h4 className="text-[14px] font-medium text-white mb-1">
                 Security &amp; domain news — straight to your inbox.
               </h4>
-              <p className="text-sm text-white/40">Monthly roundup. No spam, ever. Unsubscribe anytime.</p>
+              <p className="text-[14px] text-white/40">Monthly roundup. No spam, ever. Unsubscribe anytime.</p>
             </div>
             {subscribed ? (
               <motion.p
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="text-sm font-semibold text-[#FF4F00]"
+                className="text-[14px] font-medium text-[#FF4F00]"
               >
                 You&apos;re in! Watch your inbox.
               </motion.p>
@@ -140,14 +140,14 @@ export default function Footer() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
-                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/6 border border-white/10 text-white placeholder-white/25 focus:outline-none focus:border-[#FF4F00]/40 transition-all text-sm"
+                    className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/6 border border-white/10 text-white text-[14px] placeholder-white/25 focus:outline-none focus:border-[#FF4F00]/40 transition-all"
                   />
                 </div>
                 <motion.button
                   type="submit"
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
-                  className="shrink-0 px-4 py-3 rounded-xl bg-[#FF4F00] hover:bg-[#CC3F00] text-white text-sm font-semibold transition-colors flex items-center gap-1.5"
+                  className="shrink-0 px-4 py-3 rounded-xl bg-[#FF4F00] hover:bg-[#CC3F00] text-white text-[14px] font-normal transition-colors flex items-center gap-1.5"
                 >
                   Subscribe <ArrowRight size={13} />
                 </motion.button>
@@ -158,11 +158,11 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="py-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/30 flex items-center gap-2">
+          <p className="text-[12px] text-white/30 flex items-center gap-2">
             <Globe2 size={12} />
             © {new Date().getFullYear()} Zane360 Ltd. All rights reserved.
           </p>
-          <p className="text-xs text-white/30">Protecting businesses across 60+ countries.</p>
+          <p className="text-[12px] text-white/30">Protecting businesses across 60+ countries.</p>
         </div>
       </div>
     </footer>
