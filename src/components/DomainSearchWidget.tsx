@@ -57,7 +57,7 @@ export default function DomainSearchWidget() {
           disabled={loading || !query.trim()}
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.96 }}
-          className="btn-glow shrink-0 px-6 py-4 rounded-2xl font-normal text-[18px] text-white bg-[#FF4F00] hover:bg-[#CC3F00] disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+          className="btn-glow shrink-0 px-6 py-4 rounded-2xl font-semibold text-[14px] text-white bg-[#FF4F00] hover:bg-[#CC3F00] disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
         >
           {loading ? <Loader2 size={18} className="animate-spin" /> : "Search"}
         </motion.button>
@@ -121,7 +121,7 @@ export default function DomainSearchWidget() {
                             ? <CheckCircle2 size={17} className="text-emerald-500 shrink-0" />
                             : <XCircle size={17} className="text-[#CCCCCC] shrink-0" />}
                           <div>
-                            <span className={`font-normal text-[18px] ${r.available ? "text-[#141414]" : "text-[#CCCCCC] line-through"}`}>
+                            <span className={`font-semibold text-[14px] ${r.available ? "text-[#141414]" : "text-[#CCCCCC] line-through"}`}>
                               {searched}{r.ext}
                             </span>
                             <span className="text-[12px] text-[#696F7B] ml-2">{r.price}</span>

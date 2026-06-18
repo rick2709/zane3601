@@ -34,8 +34,8 @@ export default function HowItWorks() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-[12px] font-medium uppercase text-[#696F7B] mb-4">How It Works</p>
-            <h2 className="text-[42px] font-normal leading-[1.4] text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
+            <p className="text-[12px] font-medium uppercase tracking-[0.08em] text-[#696F7B] mb-4">How It Works</p>
+            <h2 className="text-[clamp(32px,4.5vw,42px)] font-normal leading-[1.05] text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
               From search to secured in{" "}
               <span className="gradient-text">four steps.</span>
             </h2>
@@ -67,14 +67,14 @@ export default function HowItWorks() {
                   {/* Content card */}
                   <div className="flex-1 bg-white border border-black/7 hover:border-black/12 rounded-2xl p-6 transition-all duration-300 hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] group-hover:shadow-[0_4px_20px_rgba(255,79,0,0.04)]">
                     <div className="flex items-start justify-between mb-3">
-                      <h3 className="text-[15px] font-light text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
+                      <h3 className="text-[15px] font-normal text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
                         {step.title}
                       </h3>
                       <span className={`text-2xl font-bold opacity-20 font-mono ${s.num}`}>
                         {step.num}
                       </span>
                     </div>
-                    <p className="text-[18px] text-[#696F7B] leading-[1.3]">{step.desc}</p>
+                    <p className="text-[14px] text-[#696F7B] leading-[1.3]">{step.desc}</p>
                   </div>
                 </motion.div>
               );

@@ -65,7 +65,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="relative px-4 py-2 text-[10px] font-normal text-[#696F7B] hover:text-[#141414] transition-colors duration-200 group"
+                className="relative px-4 py-2 text-[14px] font-normal text-[#696F7B] hover:text-[#141414] transition-colors duration-200 group"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#FF4F00] group-hover:w-4 transition-all duration-300 rounded-full" />
@@ -77,7 +77,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <a
               href="#domains"
-              className="text-[10px] font-normal text-[#696F7B] hover:text-[#141414] transition-colors"
+              className="text-[14px] font-normal text-[#696F7B] hover:text-[#141414] transition-colors"
             >
               Sign In
             </a>
@@ -85,7 +85,7 @@ export default function Navbar() {
               href="#domains"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="btn-glow px-5 py-2.5 rounded-xl text-[18px] font-normal text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors duration-200"
+              className="btn-glow px-5 py-2.5 rounded-xl text-[14px] font-semibold text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors duration-200"
             >
               Get Started
             </motion.a>
@@ -141,17 +141,17 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.07 }}
                     onClick={() => setMobileOpen(false)}
-                    className="block px-4 py-3 rounded-xl text-[10px] font-normal text-[#696F7B] hover:text-[#141414] hover:bg-black/4 transition-colors"
+                    className="block px-4 py-3 rounded-xl text-[14px] font-normal text-[#696F7B] hover:text-[#141414] hover:bg-black/4 transition-colors"
                   >
                     {link.label}
                   </motion.a>
                 ))}
               </nav>
               <div className="space-y-3 pt-6 border-t border-black/8">
-                <a href="#domains" className="block text-center py-3 rounded-xl text-[10px] font-normal text-[#696F7B] hover:text-[#141414] border border-black/12 hover:border-black/20 transition-all">
+                <a href="#domains" className="block text-center py-3 rounded-xl text-[14px] font-normal text-[#696F7B] hover:text-[#141414] border border-black/12 hover:border-black/20 transition-all">
                   Sign In
                 </a>
-                <a href="#domains" className="block text-center py-3 rounded-xl text-[18px] font-normal text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors">
+                <a href="#domains" className="block text-center py-3 rounded-xl text-[14px] font-semibold text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors">
                   Get Started Free
                 </a>
               </div>

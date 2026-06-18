@@ -52,7 +52,7 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             custom={1} variants={floatVariants} initial="hidden" animate="visible"
-            className="text-[42px] font-normal leading-[1.0] text-[#141414]"
+            className="text-[clamp(36px,5vw,48px)] font-normal leading-[1] text-[#141414]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Your Domain.{" "}
@@ -64,7 +64,7 @@ export default function Hero() {
           {/* Description — short on mobile, full on sm+ */}
           <motion.p
             custom={2} variants={floatVariants} initial="hidden" animate="visible"
-            className="mt-4 text-[18px] text-[#696F7B] leading-[1.3]"
+            className="mt-4 text-[14px] text-[#696F7B] leading-[1.3]"
           >
             <span className="sm:hidden">500+ TLDs · AI cybersecurity · 60+ countries. One platform.</span>
             <span className="hidden sm:inline">
@@ -82,14 +82,14 @@ export default function Hero() {
             <motion.a
               href="#domain-search"
               whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}
-              className="btn-glow inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-normal text-[18px] text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors duration-200 shadow-lg shadow-orange-500/20"
+              className="btn-glow inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-semibold text-[14px] text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors duration-200 shadow-lg shadow-orange-500/20"
             >
               Find a Domain <ArrowRight size={15} />
             </motion.a>
             <motion.a
               href="#security"
               whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}
-              className="inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-normal text-[18px] text-[#141414] border-2 border-[#141414]/15 hover:border-[#141414]/30 hover:bg-black/4 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-semibold text-[14px] text-[#141414] border-2 border-[#141414]/15 hover:border-[#141414]/30 hover:bg-black/4 transition-all duration-200"
             >
               <Shield size={15} className="text-[#FF4F00]" />
               Secure Your Business

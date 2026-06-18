@@ -55,10 +55,10 @@ function ServiceCard({ icon: Icon, label, desc, index, accent }: {
       <div className={`inline-flex p-3 rounded-xl mb-4 ${s.iconBg}`}>
         <Icon size={20} />
       </div>
-      <h3 className="text-[15px] font-light text-[#141414] mb-2" style={{ fontFamily: "var(--font-heading)" }}>
+      <h3 className="text-[15px] font-normal text-[#141414] mb-2" style={{ fontFamily: "var(--font-heading)" }}>
         {label}
       </h3>
-      <p className="text-[18px] text-[#696F7B] leading-[1.3]">{desc}</p>
+      <p className="text-[14px] text-[#696F7B] leading-[1.3]">{desc}</p>
     </motion.div>
   );
 }
@@ -78,17 +78,17 @@ function Pillar({ title, subtitle, tag, services, accent, id, tagColor }: {
         transition={{ duration: 0.6 }}
         className="mb-8"
       >
-        <span className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-[18px] font-medium mb-4 ${tagColor}`}>
+        <span className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-[14px] font-medium mb-4 ${tagColor}`}>
           <span className="w-1.5 h-1.5 rounded-full bg-current" />
           {tag}
         </span>
-        <h3 className="text-[42px] font-normal leading-[1.4] text-[#141414] mb-3" style={{ fontFamily: "var(--font-heading)" }}>
+        <h3 className="text-[clamp(18px,2.5vw,22px)] font-normal leading-[1.2] text-[#141414] mb-3" style={{ fontFamily: "var(--font-heading)" }}>
           {title}
         </h3>
-        <p className="text-[18px] text-[#696F7B] leading-[1.3] max-w-md">{subtitle}</p>
+        <p className="text-[14px] text-[#696F7B] leading-[1.3] max-w-md">{subtitle}</p>
         <a
           href="#domain-search"
-          className={`inline-flex items-center gap-2 mt-5 text-[18px] font-normal transition-colors group ${
+          className={`inline-flex items-center gap-2 mt-5 text-[14px] font-normal transition-colors group ${
             accent === "orange" ? "text-[#FF4F00] hover:text-[#CC3F00]" : "text-[#141414] hover:text-[#333]"
           }`}
         >
@@ -120,12 +120,12 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-[12px] font-medium uppercase text-[#696F7B] mb-4">What We Do</p>
-            <h2 className="text-[42px] font-normal leading-[1.4] text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
+            <p className="text-[12px] font-medium uppercase tracking-[0.08em] text-[#696F7B] mb-4">What We Do</p>
+            <h2 className="text-[clamp(32px,4.5vw,42px)] font-normal leading-[1.05] text-[#141414]" style={{ fontFamily: "var(--font-heading)" }}>
               Two pillars.{" "}
               <span className="gradient-text">One platform.</span>
             </h2>
-            <p className="mt-5 text-[18px] text-[#696F7B] leading-[1.3] max-w-2xl mx-auto">
+            <p className="mt-5 text-[14px] text-[#696F7B] leading-[1.3] max-w-2xl mx-auto">
               From the moment you register a domain to the day-to-day protection of your digital assets — Zane360 has every layer covered.
             </p>
           </motion.div>

@@ -45,12 +45,12 @@ function StatItem({ value, suffix, label, decimals, active, index }: {
       className="text-center px-4 py-8"
     >
       <div
-        className="text-[42px] font-normal gradient-text tabular-nums"
+        className="text-[48px] font-normal gradient-text tabular-nums"
         style={{ fontFamily: "var(--font-heading)" }}
       >
         {decimals > 0 ? count.toFixed(decimals) : Math.floor(count).toLocaleString()}{suffix}
       </div>
-      <div className="mt-2 text-[18px] text-[#696F7B] font-medium">{label}</div>
+      <div className="mt-2 text-[14px] text-[#696F7B] font-medium">{label}</div>
     </motion.div>
   );
 }
