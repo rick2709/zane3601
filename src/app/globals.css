@@ -65,6 +65,7 @@ span, label, li, td, th { font-family: var(--font-body); }
 
 /* ── Gradient text — orange accent ── */
 .gradient-text {
+  font-family: inherit;
   background: linear-gradient(135deg, #FF4F00 0%, #FF7A3D 55%, #FFB347 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -72,6 +73,7 @@ span, label, li, td, th { font-family: var(--font-body); }
 }
 
 .gradient-text-warm {
+  font-family: inherit;
   background: linear-gradient(135deg, #FF4F00 0%, #FF7A3D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
