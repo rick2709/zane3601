@@ -1,23 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 @import "tailwindcss";
-
-@font-face {
-  font-family: 'Miso';
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  src: url("https://static.wixstatic.com/ufonts/343a2a_4e484da66ffc4465a05a1c9ea5caf495/woff2/file.woff2") format("woff2"),
-       url("https://static.wixstatic.com/ufonts/343a2a_4e484da66ffc4465a05a1c9ea5caf495/woff/file.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Miso';
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("https://static.wixstatic.com/ufonts/343a2a_5b4cd32fc19d46e1b8c1b142abb27d39/woff2/file.woff2") format("woff2"),
-       url("https://static.wixstatic.com/ufonts/343a2a_5b4cd32fc19d46e1b8c1b142abb27d39/woff/file.woff") format("woff");
-}
 
 @theme {
   --color-brand-orange: #FF4F00;
@@ -26,11 +7,6 @@
   --color-surface: #F7F7F7;
   --color-surface-2: #EEEEEE;
   --color-border: rgba(0, 0, 0, 0.08);
-}
-
-:root {
-  --font-heading: 'Miso', sans-serif;
-  --font-body: 'Wix Madefor Text', system-ui, sans-serif;
 }
 
 html {
