@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 import { Globe, Search, ArrowLeftRight, Layers, Shield, Eye, Lock, Zap, ArrowRight } from "lucide-react";
 
 const domainServices = [
@@ -86,14 +87,14 @@ function Pillar({ title, subtitle, tag, services, accent, id, tagColor }: {
           {title}
         </h3>
         <p className="text-[14px] text-[#696F7B] leading-[1.3] max-w-md">{subtitle}</p>
-        <a
-          href="#domain-search"
+        <Link
+          href={accent === "orange" ? "/domains" : "/cybersecurity"}
           className={`inline-flex items-center gap-2 mt-5 text-[14px] font-normal transition-colors group ${
             accent === "orange" ? "text-[#FF4F00] hover:text-[#CC3F00]" : "text-[#141414] hover:text-[#333]"
           }`}
         >
           Explore {tag} <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-        </a>
+        </Link>
       </motion.div>
       <motion.div
         variants={{ visible: { transition: { staggerChildren: 0.08 } }, hidden: {} }}

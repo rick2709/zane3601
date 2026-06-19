@@ -6,15 +6,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Shield, X, Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 
+const MotionLink = motion.create(Link);
+
 const navLinks = [
-  { label: "Domains", href: "#domains" },
-  { label: "Security", href: "#security" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "About", href: "#about" },
+  { label: "Domains",  href: "/domains"      },
+  { label: "Security", href: "/cybersecurity" },
+  { label: "About",    href: "/about"         },
+  { label: "Contact",  href: "/contact"       },
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled]     = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
@@ -61,34 +63,41 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="relative px-4 py-2 text-[14px] font-normal text-[#696F7B] hover:text-[#141414] transition-colors duration-200 group"
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#FF4F00] group-hover:w-4 transition-all duration-300 rounded-full" />
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative px-4 py-2 text-[14px] font-normal transition-colors duration-200 group ${
+                    isActive ? "text-[#141414]" : "text-[#696F7B] hover:text-[#141414]"
+                  }`}
+                >
+                  {link.label}
+                  <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#FF4F00] transition-all duration-300 rounded-full ${
+                    isActive ? "w-4" : "w-0 group-hover:w-4"
+                  }`} />
+                </Link>
+              );
+            })}
           </div>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href="#domains"
+            <Link
+              href="/contact"
               className="text-[14px] font-normal text-[#696F7B] hover:text-[#141414] transition-colors"
             >
               Sign In
-            </a>
-            <motion.a
-              href="#domains"
+            </Link>
+            <MotionLink
+              href="/domains"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="btn-glow px-5 py-2.5 rounded-xl text-[14px] font-semibold text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors duration-200"
             >
               Get Started
-            </motion.a>
+            </MotionLink>
           </div>
 
           {/* Mobile hamburger */}
@@ -133,27 +142,37 @@ export default function Navbar() {
                 </button>
               </div>
               <nav className="flex-1 space-y-1">
-                {navLinks.map((link, i) => (
-                  <motion.a
-                    key={link.href}
-                    href={link.href}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.07 }}
-                    onClick={() => setMobileOpen(false)}
-                    className="block px-4 py-3 rounded-xl text-[14px] font-normal text-[#696F7B] hover:text-[#141414] hover:bg-black/4 transition-colors"
-                  >
-                    {link.label}
-                  </motion.a>
-                ))}
+                {navLinks.map((link, i) => {
+                  const isActive = pathname === link.href || pathname.startsWith(link.href + "/");
+                  return (
+                    <motion.div
+                      key={link.href}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.07 }}
+                    >
+                      <Link
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        className={`block px-4 py-3 rounded-xl text-[14px] font-normal transition-colors ${
+                          isActive
+                            ? "text-[#FF4F00] bg-orange-50"
+                            : "text-[#696F7B] hover:text-[#141414] hover:bg-black/4"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    </motion.div>
+                  );
+                })}
               </nav>
               <div className="space-y-3 pt-6 border-t border-black/8">
-                <a href="#domains" className="block text-center py-3 rounded-xl text-[14px] font-normal text-[#696F7B] hover:text-[#141414] border border-black/12 hover:border-black/20 transition-all">
+                <Link href="/contact" className="block text-center py-3 rounded-xl text-[14px] font-normal text-[#696F7B] hover:text-[#141414] border border-black/12 hover:border-black/20 transition-all">
                   Sign In
-                </a>
-                <a href="#domains" className="block text-center py-3 rounded-xl text-[14px] font-semibold text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors">
+                </Link>
+                <Link href="/domains" className="block text-center py-3 rounded-xl text-[14px] font-semibold text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors">
                   Get Started Free
-                </a>
+                </Link>
               </div>
             </motion.div>
           </>

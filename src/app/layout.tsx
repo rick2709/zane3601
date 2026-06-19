@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Wix_Madefor_Text } from "next/font/google";
 import "./globals.css";
+import LayoutShell from "@/components/LayoutShell";
 
 const miso = localFont({
   src: [
@@ -37,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`scroll-smooth ${miso.variable} ${wixMadeforText.variable}`}>
       <body className="min-h-screen bg-white text-black antialiased overflow-x-hidden">
-        {children}
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   );

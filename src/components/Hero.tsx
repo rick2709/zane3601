@@ -1,8 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Globe, Shield, Zap } from "lucide-react";
 import DomainSearchWidget from "./DomainSearchWidget";
+
+const MotionLink = motion.create(Link);
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -79,21 +82,21 @@ export default function Hero() {
             custom={3} variants={floatVariants} initial="hidden" animate="visible"
             className="mt-6 flex flex-wrap gap-3"
           >
-            <motion.a
-              href="#domain-search"
+            <MotionLink
+              href="/domains"
               whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}
               className="btn-glow inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-semibold text-[14px] text-white bg-[#FF4F00] hover:bg-[#CC3F00] transition-colors duration-200 shadow-lg shadow-orange-500/20"
             >
               Find a Domain <ArrowRight size={15} />
-            </motion.a>
-            <motion.a
-              href="#security"
+            </MotionLink>
+            <MotionLink
+              href="/cybersecurity"
               whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.96 }}
               className="inline-flex items-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-xl font-semibold text-[14px] text-[#141414] border-2 border-[#141414]/15 hover:border-[#141414]/30 hover:bg-black/4 transition-all duration-200"
             >
               <Shield size={15} className="text-[#FF4F00]" />
               Secure Your Business
-            </motion.a>
+            </MotionLink>
           </motion.div>
 
           {/* Trust badges */}
